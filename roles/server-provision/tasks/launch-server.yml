@@ -21,12 +21,12 @@
   register: ec2_out
 - name: wait for SSH to comeup
   wait_for:
-    host:{{ item.public_dns_name }}
+    host:{{ item.public_ip }}
     port:22
     delay:60
     timeout:320
     state:started
   with_items: '{{ec2_out.instances}}'
 - name: adding to ansible hosts
-  add_host: hostname={{ item.public_dns_name }}n groups=dev
+  add_host: hostname={{ item.public_dns_name }} groups=dev
   with_items: " {{ec2_out.instances}} "  

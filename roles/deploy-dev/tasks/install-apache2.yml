@@ -11,14 +11,15 @@
 - name: backup html directory
   become: yes
   ignore_errors: yes
-  command: sh files/backup.sh
+  command: cp /var/www/html /var/www/html-time && rm -f /var/www/html/*
 
 - name: uploading files from github
   #  copy:
   #    src: files/index.html
   git:
     repo: https://github.com/akpatnaikuni/sample-html-webapplication.git
-    dest: /var/www/html
+    dest: /var/www/html/
+    force: yes
     version: main
     #    ignore_errors: yes
 
