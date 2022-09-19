@@ -1,0 +1,15 @@
+---
+ - hosts: dev
+   become: yes
+   tasks:
+   - name: installing apache2
+     command: apt-get install apache2 -y
+   - name: copy content
+     copy:
+      src: test.html
+      dest: /var/www/html/
+   - name: starting apache2
+     service:
+      name: apache2
+      state: restarted
+...

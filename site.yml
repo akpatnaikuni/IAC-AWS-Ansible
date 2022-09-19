@@ -1,0 +1,10 @@
+---
+ - hosts: dev
+   gather_facts: false
+   vars:
+     ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+   remote_user: ubuntu
+   become: true
+   become_method: sudo
+   roles:
+    - { role: deploy-dev }
