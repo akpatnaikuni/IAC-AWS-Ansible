@@ -1,2 +1,17 @@
 ---
 # vars file for vpc-provision
+vpc_cidr: 10.10.0.0/24
+vpc_name: "projectA-VPC"
+
+# Subnet
+subnet_name: "projectA-subnet"
+subnet_cidr: 10.10.0.0/26
+
+igw_name: "projectA-IGW"
+
+
+#route table name
+route_name: "projectA-route"
+
+securitygroup_name: "projectA-SG"
+
