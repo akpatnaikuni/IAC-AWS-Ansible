@@ -1,0 +1,34 @@
+task : provisioning of infrastructure
+
+we need to install "awscli(command line interface)", python, boto and boto3.
+
+Ansible server should have permissions to create ec2 instances.For that we need to create IAM role in AWS and then attach that role to ansible server.
+
+I navigate to directory /etc/ansible/roles. cd /etc/ansible/roles
+
+I created a role with name server-provision. 
+ansible-galaxy init <role name>
+ansible-galaxy init server-provision
+
+change the directory to server-provision. 
+cd server-provision
+
+now change the directory to tasks. 
+cd tasks/
+
+create newfile with name launch-server.yml
+
+We are including launch-server.yml in main.yml
+
+navigate to vars and add variables.
+cd ..
+cd vars/
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+---
+# vars file for server-provision
+KEY_NAME: devops
+INSTANCE_TYPE: t2.micro
+AMI_ID: ami-052efd3df9dad4825
+REGION: us-east-1
+INSTANCE_NAME: projectA-dev
+VPC_SUBNET_ID: subnet-0426236ef9e7a7566
+ASSIGN_PUBLIC_IP: true
+SECURITY_GROUP: my_sg
+VOLUME_SIZE_GB: 8
+ansible_ssh_private_key: "/etc/ansible/devops.pem"
+COUNT: 2
